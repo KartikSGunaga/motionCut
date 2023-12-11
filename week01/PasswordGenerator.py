@@ -9,14 +9,14 @@ def printPassword(password):
 
 def chooseLength(choice):
     if choice == "yes":
-        # If the user chooses to specify the password length
+        # If the user chooses to specify the password length:
         num = int(input("Enter the number of digits you want: "))
         letters = int(input("Enter the number of letters you want: "))
         spChar = int(input("Enter the number of special characters you want: "))
         generatePassword(num, letters, spChar)
 
     else:
-        # If we choose to use a default password length
+        # If user chooses to use a default password length:
         length = 17
         num = rd.randint(1, length - 4)  # Ensuring at least one digit
         length -= num
@@ -58,10 +58,10 @@ def main():
     print("\nWelcome to Kartik's Password Generator!")
 
     while True:
-        # Get user input for choosing the password length
+        # Getting user input for choosing the password length
         response = input("\nDo you wish to define password length (yes or no): ").lower()
 
-        # Call the function based on user's choice
+        # Calling the function based on user's choice
         chooseLength(response)
 
         choice = input("\nDo you want another password to be generated? (yes or no): ")
